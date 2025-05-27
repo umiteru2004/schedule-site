@@ -2,4 +2,5 @@
 時間割だったり、過去問だったりをまとめるサイトを作る
 
 ## チームメンバー
-- [けいすけ](https://github.com/keich439)
+- [吉本](https://github.com/keich439)
+- [大串](https://github.com/ohgushi0329)
