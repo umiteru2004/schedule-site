@@ -7,8 +7,7 @@ $sql=$pdo->prepare('select * from customer where login=? and password=?');
 $sql->execute([$_REQUEST['login'], $_REQUEST['password']]);
 foreach ($sql as $row) {
 	$_SESSION['customer']=[
-		'id'=>$row['id'], 'name'=>$row['name'], 
-		'address'=>$row['address'], 'login'=>$row['login'], 
+		'id'=>$row['id'], 'name'=>$row['name'],
 		'password'=>$row['password']];
 }
 if (isset($_SESSION['customer'])) {
