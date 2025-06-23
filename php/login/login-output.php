@@ -1,6 +1,4 @@
 <?php session_start(); ?>
-<?php require '../header.php'; ?>
-<?php require 'menu.php'; ?>
 <?php
 unset($_SESSION['customer']);
 $pdo=new PDO('mysql:host=localhost;dbname=shop;charset=utf8', 
@@ -19,4 +17,3 @@ if (isset($_SESSION['customer'])) {
 	echo 'ログイン名またはパスワードが違います。';
 }
 ?>
-<?php require '../footer.php'; ?>
