@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php
 unset($_SESSION['customer']);
-$pdo=new PDO('mysql:host=localhost;dbname=shop;charset=utf8', 
+$pdo=new PDO('mysql:host=localhost;dbname=exams_site;charset=utf8', 
 	'staff', 'password');
 $sql=$pdo->prepare('select * from customer where login=? and password=?');
 $sql->execute([$_REQUEST['login'], $_REQUEST['password']]);
