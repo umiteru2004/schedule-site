@@ -1,7 +1,7 @@
 <?php require './header.php'; ?>
 
 <?php
-$exam_types = ['前期中間', '前期期末', '後期中間', '後期期末'];
+$exam_types = ['前期中間', '前期期末'];
 $subject = $_GET['subject'];
 $pdo = new PDO('mysql:host=localhost;dbname=exams_site;charset=utf8', 'staff', 'password');
 $sql = $pdo->prepare('select * from exam where subject=? and type=?');
