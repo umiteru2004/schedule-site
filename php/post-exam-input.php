@@ -75,7 +75,7 @@ error_reporting(E_ALL);
 
 <body>
 
-    <form action="post_exam_output.php" method="post" enctype="multipart/form-data">
+    <form action="post-exam-output.php" method="post" enctype="multipart/form-data">
         <h1>過去問投稿ページ</h1>
 
         <h2>教科を選択してください</h2>
