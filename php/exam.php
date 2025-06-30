@@ -28,8 +28,6 @@ foreach ($exam_types as $exam_type) {
 }
 ?>
 
-</div>
-</main>
 </body>
 
 </html>
