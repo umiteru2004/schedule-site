@@ -1,4 +1,4 @@
-<?php require './header.php'; ?>
+<?php require './ui/header.php'; ?>
 
 <head>
     <meta charset="UTF-8">
