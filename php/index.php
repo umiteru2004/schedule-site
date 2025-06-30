@@ -52,11 +52,11 @@ $subjects = [
         </tr>
         <tr>
             <?php foreach ($subjects as $subject): ?>
-                <td><a href="php/exam.php/?subject=<?php echo urlencode($subject['path']); ?>"><?php echo htmlspecialchars($subject['name']); ?></td>
+                <td><a href="exam.php?subject=<?php echo urlencode($subject['path']); ?>"><?php echo htmlspecialchars($subject['name']); ?></td>
         </tr>
     <?php endforeach; ?>
     </table>
-    <a href="php/post-exam.php" class="kakomon">過去問投稿ページはこちら</a>
+    <a href="post-exam-input.php" class="kakomon">過去問投稿ページはこちら</a>
 </body>
 
 </html>
