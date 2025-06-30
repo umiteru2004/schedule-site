@@ -1,3 +1,5 @@
+<?php require "../ui/header.php"; ?>
+
 <?php session_start(); ?>
 <?php
 unset($_SESSION['customer']);
@@ -21,3 +23,5 @@ if (isset($_SESSION['customer'])) {
 	echo 'ログイン名またはパスワードが違います。';
 }
 ?>
+
+<?php require "../ui/footer.php"; ?>
