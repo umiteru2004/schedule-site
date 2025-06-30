@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/ui/header.php';
 $subjects = [
     ['name' => '応用数学BⅠ', 'path' => '応用数学BⅠ'],
     ['name' => '総合英語BⅠ', 'path' => '総合英語BⅠ'],
