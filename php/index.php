@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/ui/header.php';
 $subjects = [
     ['name' => '応用数学BⅠ', 'path' => '応用数学BⅠ'],
     ['name' => '総合英語BⅠ', 'path' => '総合英語BⅠ'],
@@ -52,11 +52,11 @@ $subjects = [
         </tr>
         <tr>
             <?php foreach ($subjects as $subject): ?>
-                <td><a href="php/exam.php/?subject=<?php echo urlencode($subject['path']); ?>"><?php echo htmlspecialchars($subject['name']); ?></td>
+                <td><a href="exam.php?subject=<?php echo urlencode($subject['path']); ?>"><?php echo htmlspecialchars($subject['name']); ?></td>
         </tr>
     <?php endforeach; ?>
     </table>
-    <a href="php/post-exam.php" class="kakomon">過去問投稿ページはこちら</a>
+    <a href="post-exam-input.php" class="kakomon">過去問投稿ページはこちら</a>
 </body>
 
 </html>

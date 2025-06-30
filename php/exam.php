@@ -1,4 +1,4 @@
-<?php require './header.php'; ?>
+<?php require './ui/header.php'; ?>
 
 <?php
 $exam_types = ['前期中間', '前期期末'];
@@ -28,6 +28,4 @@ foreach ($exam_types as $exam_type) {
 }
 ?>
 
-</body>
-
-</html>
+<?php require './ui/footer.php'; ?>
