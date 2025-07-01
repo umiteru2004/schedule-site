@@ -22,7 +22,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <div class="header-menu">
             <?php // --- ここからが修正部分です --- 
             ?>
-            <?php if (isset($_SESSION['id'])): ?>
+            <?php if (isset($_SESSION['customer'])): ?>
                 <a href="/login/logout-input.php">ログアウト</a>
             <?php else: ?>
                 <a href="/login/login-input.php">ログイン</a>
