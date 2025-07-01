@@ -72,15 +72,15 @@ if (session_status() === PHP_SESSION_NONE) {
 <body>
 
     <header>
-        <h1><a href="index.php">My Awesome Site</a></h1>
+        <h1><a href="/">My Awesome Site</a></h1>
 
         <div class="header-menu">
             <?php // --- ここからが修正部分です --- 
             ?>
             <?php if (isset($_SESSION['id'])): ?>
-                <a href="login/logout-input.php">ログアウト</a>
+                <a href="/login/logout-input.php">ログアウト</a>
             <?php else: ?>
-                <a href="login/login-input.php">ログイン</a>
+                <a href="/login/login-input.php">ログイン</a>
             <?php endif; ?>
             <?php // --- ここまでが修正部分です --- 
             ?>
