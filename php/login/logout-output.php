@@ -1,6 +1,5 @@
 <?php require "../ui/header.php"; ?>
 
-<?php session_start(); ?>
 <?php
 if (isset($_SESSION['customer'])) {
 	unset($_SESSION['customer']);
