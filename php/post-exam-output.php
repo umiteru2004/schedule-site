@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php require './ui/header.php'; ?>
 
 <head>
     <meta charset="UTF-8">
