@@ -1,3 +1,5 @@
+<?php require "../ui/header.php"; ?>
+
 <?php session_start(); ?>
 <?php
 if (isset($_SESSION['customer'])) {
@@ -7,3 +9,5 @@ if (isset($_SESSION['customer'])) {
 	echo 'すでにログアウトしています。';
 }
 ?>
+
+<?php require "../ui/footer.php"; ?>
