@@ -1,6 +1,15 @@
 body {
+  margin: 0;
   color: #1e1e1e;
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
