@@ -1,6 +1,10 @@
-<?php require "../ui/header.php"; ?>
+<?php require "../ui/head.php"; ?>
+</head>
 
-<p>ログアウトしますか？</p>
-<a href="logout-output.php">ログアウト</a>
+<body>
+    <?php require "../ui/header.php"; ?>
 
-<?php require "../ui/footer.php"; ?>
+    <p>ログアウトしますか？</p>
+    <a href="logout-output.php">ログアウト</a>
+
+    <?php require "../ui/footer.php"; ?>
