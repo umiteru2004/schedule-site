@@ -1,6 +1,5 @@
 <?php require "../ui/header.php"; ?>
 
-<?php session_start(); ?>
 <?php
 unset($_SESSION['customer']);
 $pdo = new PDO(
@@ -10,14 +9,17 @@ $pdo = new PDO(
 );
 $sql = $pdo->prepare('select * from customer where login=? and password=?');
 $sql->execute([$_REQUEST['login'], $_REQUEST['password']]);
-foreach ($sql as $row) {
+$customer = $sql->fetch(PDO::FETCH_ASSOC);
+
+if ($customer) {
+	session_regenerate_id();
+
 	$_SESSION['customer'] = [
-		'id' => $row['id'],
-		'name' => $row['name'],
-		'password' => $row['password']
+		'id' => $customer['id'],
+		'name' => $customer['name'],
+		'password' => $customer['password']
 	];
-}
-if (isset($_SESSION['customer'])) {
+
 	echo 'いらっしゃいませ、', $_SESSION['customer']['name'], 'さん。';
 } else {
 	echo 'ログイン名またはパスワードが違います。';
