@@ -3,14 +3,21 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+
+$tabTitle = "過去問共有サイト";
+
+if (isset($PAGE_TITLE)) {
+    $tabTitle = htmlspecialchars($PAGE_TITLE) . " - " . $tabTitle;
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo isset($page_title) ? htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8') : 'My Website'; ?></title>
+    <title><?php echo $tabTitle; ?></title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
