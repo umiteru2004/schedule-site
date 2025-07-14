@@ -9,7 +9,9 @@ require "../ui/head.php";
 <body>
     <?php require "../ui/header.php"; ?>
 
-    <p>ログアウトしますか？</p>
-    <a href="logout-output.php">ログアウト</a>
+    <main>
+        <p>ログアウトしますか？</p>
+        <a href="logout-output.php">ログアウト</a>
+    </main>
 
     <?php require "../ui/footer.php"; ?>
