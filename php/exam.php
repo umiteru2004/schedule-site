@@ -1,4 +1,10 @@
-<?php require "./ui/head.php"; ?>
+<?php
+$subject = $_GET['subject'];
+$PAGE_TITLE = $subject;
+
+require "./ui/head.php";
+?>
+
 </head>
 
 <body>
@@ -6,7 +12,6 @@
 
     <?php
     $exam_types = ['前期中間', '前期期末'];
-    $subject = $_GET['subject'];
     $pdo = new PDO('mysql:host=localhost;dbname=exams_site;charset=utf8', 'staff', 'password');
     $sql = $pdo->prepare('select * from exam where subject=? and type=?');
 

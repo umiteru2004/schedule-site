@@ -1,4 +1,9 @@
-<?php require "../ui/head.php"; ?>
+<?php
+$PAGE_TITLE = "ログイン";
+
+require "../ui/head.php";
+?>
+
 </head>
 
 <body>
@@ -19,7 +24,7 @@
 		session_regenerate_id();
 
 		$_SESSION['customer'] = [
-			'id' => $customer['id'],
+			'id' => $customer['login'],
 			'name' => $customer['name'],
 			'password' => $customer['password']
 		];
