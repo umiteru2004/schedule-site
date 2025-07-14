@@ -21,6 +21,28 @@ header {
   background-color: white;
 }
 
+main {
+  min-height: calc(100vh - 71px);
+  width: 1000px;
+  margin: 0 auto;
+  border-inline: 1px solid #d9d9d9;
+  background-color: white;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+thead {
+  background-color: rgb(173, 209, 226);
+}
+
+th,
+td {
+  border: 1px solid black;
+}
+
 .header {
   display: flex;
   height: 100%;

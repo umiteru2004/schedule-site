@@ -1,67 +1,44 @@
 <?php require "./ui/head.php"; ?>
+<link href="/css/home.css" rel="stylesheet" />
 </head>
 
 <body>
     <?php require "./ui/header.php"; ?>
 
-    <?php
-    $subjects = [
-        ['name' => '応用数学BⅠ', 'path' => '応用数学B1'],
-        ['name' => '総合英語BⅠ', 'path' => '総合英語B1'],
-        ['name' => '信号処理Ⅰ', 'path' => '信号処理1'],
-        ['name' => 'ネットワーク応用', 'path' => 'ネットワーク応用'],
-        ['name' => 'システム制御演習', 'path' => 'システム制御演習'],
-    ];
-    ?>
-    <!DOCTYPE html>
-    <html lang="ja">
+    <main>
+        <div>
+            <table class="subject-table">
+                <thead>
+                    <tr>
+                        <th class="subject-th">教科名</th>
+                    </tr>
+                </thead>
 
-    <head>
-        <meta charset="UTF-8">
-        <style>
-            table {
-                width: 60%;
-                border-collapse: collapse;
-                margin: 0 auto;
-                font-size: 20px;
-            }
+                <tbody>
+                    <?php
+                    $subjects = [
+                        'applied_math_b1' => '応用数学BⅠ',
+                        'general_english_b1' => '総合英語BⅠ',
+                        'signal_processing_1' => '信号処理Ⅰ',
+                        'network_application' => 'ネットワーク応用',
+                        'system_control_exercises' => 'システム制御演習'
+                    ];
 
-            table,
-            th,
-            td {
-                border: 1px solid black;
-                text-align: center;
-                padding: 10px;
-            }
+                    foreach ($subjects as $key => $value) {
+                        echo '<tr><td  class="subject-td">';
+                        echo '<a href="exam.php?subject=', $key, '">', $value, '</a>';
+                        echo '</td></tr>';
+                        echo "\n";
+                    }
+                    ?>
+                </tbody>
+            </table>
 
-            th {
-                background-color: rgb(173, 209, 226);
-            }
+            <div class="post-link">
+                <a href="post-exam-input.php">過去問投稿ページはこちら</a>
+            </div>
+        </div>
+    </main>
+</body>
 
-            td {
-                background-color: rgb(255, 255, 255);
-            }
-
-            .kakomon {
-                margin: 10px;
-            }
-        </style>
-    </head>
-
-    <body>
-        <h1>トップページ</h1>
-        <h3>過去問を見たい教科を選んでね</h3>
-        <table>
-            <tr>
-                <th>教科名</th>
-            </tr>
-            <tr>
-                <?php foreach ($subjects as $subject): ?>
-                    <td><a href="exam.php?subject=<?php echo urlencode($subject['path']); ?>"><?php echo htmlspecialchars($subject['name']); ?></td>
-            </tr>
-        <?php endforeach; ?>
-        </table>
-        <a href="post-exam-input.php" class="kakomon">過去問投稿ページはこちら</a>
-    </body>
-
-    </html>
+</html>
