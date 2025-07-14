@@ -15,15 +15,11 @@ require "../ui/head.php";
             <h2 class="login-title">ログイン</h2>
 
             <form action="login-output.php" method="post">
-                <div>
-                    <label for="login" class="login-label">ログイン名</label>
-                    <input type="text" name="login" class="login-input">
-                </div>
+                <label for="login" class="login-label">ログイン名</label>
+                <input type="text" name="login" class="login-input">
 
-                <div>
-                    <label for="login" class="login-label">パスワード</label>
-                    <input type="password" name="password" class="login-input">
-                </div>
+                <label for="login" class="login-label">パスワード</label>
+                <input type="password" name="password" class="login-input">
 
                 <input type="submit" value="ログイン" class="login-button">
         </div>
