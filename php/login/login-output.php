@@ -24,7 +24,7 @@ require "../ui/head.php";
 		session_regenerate_id();
 
 		$_SESSION['customer'] = [
-			'id' => $customer['id'],
+			'id' => $customer['login'],
 			'name' => $customer['name'],
 			'password' => $customer['password']
 		];
