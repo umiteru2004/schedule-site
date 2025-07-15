@@ -1,4 +1,8 @@
-<?php require "./ui/head.php"; ?>
+<?php
+$PAGE_TITLE = '登録';
+
+require "./ui/head.php";
+?>
 </head>
 
 <body>
