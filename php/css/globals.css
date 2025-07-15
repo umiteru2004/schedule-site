@@ -65,3 +65,13 @@ td {
 .site-title {
   color: #1e1e1e;
 }
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.login-id {
+  margin: 0;
+}
