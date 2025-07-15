@@ -7,7 +7,7 @@
         <div class="header-menu">
             <?php
             if (isset($_SESSION['customer'])) {
-                echo '<p class="login-id">', $_SESSION['customer']['id'], '</p>';
+                echo '<p class="login-id">', $_SESSION['customer']['login'], '</p>';
                 echo '<a href="/login/logout-input.php">ログアウト</a>';
                 echo '<a href="/signup-input.php">登録情報の変更</a>';
             } else {
