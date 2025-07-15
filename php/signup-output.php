@@ -1,5 +1,5 @@
 <?php
-$PAGE_TITLE = '登録';
+$PAGE_TITLE = '登録結果';
 
 require "./ui/head.php";
 ?>
