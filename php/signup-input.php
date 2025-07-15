@@ -30,10 +30,10 @@ require "./ui/head.php";
                 <?= '<input type="text" name="name" value="', $name, '" id="name" class="login-input">' ?>
 
                 <label for="login" class="login-label">ログイン名</label>
-                <?= '<input type="text" name="login" value="', $login, '" id="name" class="login-input">' ?>
+                <?= '<input type="text" name="login" value="', $login, '" id="login" class="login-input">' ?>
 
                 <label for="password" class="login-label">パスワード</label>
-                <?= '<input type="password" name="password" value="', $password, '" id="name" class="login-input">' ?>
+                <?= '<input type="password" name="password" value="', $password, '" id="password" class="login-input">' ?>
 
                 <input type="submit" value="登録" class="login-button">
             </form>
