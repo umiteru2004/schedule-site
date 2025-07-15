@@ -1,10 +1,13 @@
 <?php
+require "./lib/subjects.php";
+
 $subject = $_GET['subject'];
-$PAGE_TITLE = $subject;
+$PAGE_TITLE = $subjects[$subject];
 
 require "./ui/head.php";
 ?>
 
+<link href="/css/exam.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -13,8 +16,6 @@ require "./ui/head.php";
     <main>
 
         <?php
-        require "./lib/subjects.php";
-
         echo '<h1>', $subjects[$subject], '</h1>';
 
         $exam_types = ['前期中間', '前期期末'];
@@ -26,8 +27,8 @@ require "./ui/head.php";
             $sql->execute([$subject, $exam_type]);
             $row = $sql->fetch(PDO::FETCH_ASSOC);
             if (!$row) {
-                echo '<h2>・' . $exam_type . '</h2>';
-                echo '投稿されていません<br><br>';
+                echo '<h2>', $exam_type, '</h2>';
+                echo '<p>投稿されていません</p>';
                 continue;
             }
 
@@ -35,9 +36,8 @@ require "./ui/head.php";
             $mime_type = $finfo->buffer($row['image']);
             $img_base64 = base64_encode($row['image']);
 
-            echo '<h2>・' . $exam_type . '</h2>';
-            echo '<img src="data:' . $mime_type . ';base64,' . $img_base64 . '">';
-            echo '<br><br>';
+            echo '<h2>', $exam_type, '</h2>';
+            echo '<img src="data:', $mime_type, ';base64,', $img_base64, '" class="exam-img">';
         }
         ?>
     </main>
