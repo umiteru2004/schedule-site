@@ -13,19 +13,13 @@ require "./ui/head.php";
     <main>
 
         <?php
+        require "./lib/subjects.php";
+
+        echo '<h1>', $subjects[$subject], '</h1>';
+
         $exam_types = ['前期中間', '前期期末'];
         $pdo = new PDO('mysql:host=localhost;dbname=exams_site;charset=utf8', 'staff', 'password');
         $sql = $pdo->prepare('select * from exam where subject=? and type=?');
-
-        $subjects = [
-            'applied_math_b1' => '応用数学BⅠ',
-            'general_english_b1' => '総合英語BⅠ',
-            'signal_processing_1' => '信号処理Ⅰ',
-            'network_application' => 'ネットワーク応用',
-            'system_control_exercises' => 'システム制御演習'
-        ];
-
-        echo '<h1>', $subjects[$subject], '</h1>';
 
         foreach ($exam_types as $exam_type) {
 

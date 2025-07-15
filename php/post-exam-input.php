@@ -91,9 +91,10 @@ require "./ui/head.php";
             <select name="subject">
                 <option value="">-- 選択してください --</option>
                 <?php
-                $subject_options = ['応用数学B1', '総合英語B1', '信号処理1', 'ネットワーク応用', 'システム制御演習'];
-                foreach ($subject_options as $value) {
-                    echo '<option value="', htmlspecialchars($value), '">', htmlspecialchars($value), '</option>';
+                require "./lib/subjects.php";
+
+                foreach ($subjects as $key => $value) {
+                    echo '<option value="', $key, '">', $value, '</option>';
                 }
                 ?>
             </select>
