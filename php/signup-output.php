@@ -17,22 +17,32 @@
     }
     if (empty($sql->fetchAll())) {
         if (isset($_SESSION['customer'])) {
-            $sql = $pdo->prepare('update customer set login=?, password=? where id=?');
-            $sql->execute([$_REQUEST['login'], $_REQUEST['password'], $id]);
+            $sql = $pdo->prepare('update customer set name=?, login=?, password=? where id=?');
+            $sql->execute([
+                $_REQUEST['name'],
+                $_REQUEST['login'],
+                $_REQUEST['password'],
+                $id
+            ]);
+
             $_SESSION['customer'] = [
                 'id' => $id,
+                'name' => $_REQUEST['name'],
                 'login' => $_REQUEST['login'],
                 'password' => $_REQUEST['password']
             ];
-            echo '登録情報を更新しました';
+            echo '登録情報を更新しました。';
         } else {
-            $sql = $pdo->prepare('insert into customer (name, login, password) values(?,?,?)');
-            $sql->execute([$_REQUEST['name'], $_REQUEST['login'], $_REQUEST['password']]);
-            echo 'お客様情報を登録しました';
+            $sql = $pdo->prepare('insert into customer values(null,?,?,?,?)');
+            $sql->execute([
+                $_REQUEST['name'],
+                $_REQUEST['login'],
+                $_REQUEST['password']
+            ]);
+            echo '登録しました。';
         }
     } else {
-        echo 'ログイン名が既に使用されています。変更してください。';
-        echo '<a href="signup-input.php">サインインページに戻る</a>';
+        echo 'ログイン名がすでに使用されていますので、変更してください。';
     }
     ?>
 

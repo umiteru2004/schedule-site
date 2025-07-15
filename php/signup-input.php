@@ -15,7 +15,7 @@ require "./ui/head.php";
 
     if (isset($_SESSION['customer'])) {
         $customer = $_SESSION['customer'];
-        $login = $customer['id'];
+        $login = $customer['login'];
         $name = $customer['name'];
         $password = $customer['password'];
     }
