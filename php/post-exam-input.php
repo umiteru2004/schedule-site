@@ -3,6 +3,7 @@ $PAGE_TITLE = "投稿";
 
 require "./ui/head.php";
 ?>
+
 </head>
 
 <body>
