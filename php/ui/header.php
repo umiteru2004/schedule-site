@@ -5,14 +5,15 @@
         </h2>
 
         <div class="header-menu">
-            <?php // --- ここからが修正部分です --- 
-            ?>
-            <?php if (isset($_SESSION['customer'])): ?>
-                <a href="/login/logout-input.php">ログアウト</a>
-            <?php else: ?>
-                <a href="/login/login-input.php">ログイン</a>
-            <?php endif; ?>
-            <?php // --- ここまでが修正部分です --- 
+            <?php
+            if (isset($_SESSION['customer'])) {
+                echo '<p class="login-id">', $_SESSION['customer']['id'], '</p>';
+                echo '<a href="/login/logout-input.php">ログアウト</a>';
+                echo '<a href="/signup-input.php">登録情報の変更</a>';
+            } else {
+                echo '<a href="/login/login-input.php">ログイン</a>';
+                echo '<a href="/signup-input.php">新規登録</a>';
+            }
             ?>
         </div>
     </div>
