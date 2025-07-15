@@ -16,10 +16,10 @@ require "../ui/head.php";
 
             <form action="login-output.php" method="post">
                 <label for="login" class="login-label">ログイン名</label>
-                <input type="text" name="login" class="login-input">
+                <input type="text" name="login" id="login" class="login-input">
 
-                <label for="login" class="login-label">パスワード</label>
-                <input type="password" name="password" class="login-input">
+                <label for="password" class="login-label">パスワード</label>
+                <input type="password" name="password" id="password" class="login-input">
 
                 <input type="submit" value="ログイン" class="login-button">
         </div>
